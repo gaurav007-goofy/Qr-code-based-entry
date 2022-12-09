@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student_login.css') }}" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="center">
         <h1>Student Login</h1>
-        <form action="main.html" methon="POST" id="formid">
+        <form action="main.html" method="POST" id="formid">
             <div class="txt_field">
                 <input type="text" id="username" required>
                 <span></span>
