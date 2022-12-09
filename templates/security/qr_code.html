@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+    <link rel="stylesheet" href="qr_code.css">
+</head>
+<body>
+    <h2>Please Scan the QR Code below !</h2>
+    <img src="qr code.png" alt="Generated QR Code image"></img>
+    <br>
+    <br>
+    <button class="verify-btn" onclick="verifyEntry()">Verify Entry</button>
+
+    <script>
+        function verifyEntry(){
+            window.alert("Entry Successfully done !");
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+</html>
