@@ -9,9 +9,9 @@ storage = firebase.storage()
 
 
 if __name__ == '__main__':
-    # file = open("images/195036.png")
-    # storage.child("display-pictures/195036.png").put("images/195036.png")
+    file = open("images/195055.jpg")
+    storage.child("display-pictures/195055.jpg").put("images/195055.jpg")
 
-    url = storage.child("display-pictures/195036.png").get_url(None)
+    url = storage.child("display-pictures/195055.jpg").get_url(None)
 
     print(url)
