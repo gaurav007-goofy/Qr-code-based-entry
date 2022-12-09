@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Student Login</h1>
+        <form action="main.html" methon="POST" id="formid">
+            <div class="txt_field">
+                <input type="text" id="username" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" id="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="button" id="submit" onclick="submitData()" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="#">Signup</a>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        function submitData() {
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            jsonObject = {
+                "Username": "",
+                "Password": ""
+            }
+            jsonObject.Username = username;
+            jsonObject.Password = password;
+
+            var str = JSON.stringify(jsonObject);
+
+            console.log(str);
+        }
+        window.location.replace = "main.html";
+    </script>
+</body>
+
+</html>
