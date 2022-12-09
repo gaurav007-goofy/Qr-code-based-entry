@@ -11,5 +11,15 @@ def run():
     return render_template('homepage.html')
 
 
+@app.route('/login/<string:login_type>')
+def login_routing(login_type):
+    if login_type == "student":
+        return render_template("student_login.html")
+    elif login_type == "security":
+        return render_template("security_login.html")
+    else:
+        return "error"
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

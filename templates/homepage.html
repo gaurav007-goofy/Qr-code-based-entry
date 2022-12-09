@@ -25,18 +25,25 @@
     <div class="container">
         <div class="btn-container">
             <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i>
-            <button class="btn">Student Profile</button>
+            <button class="btn" onclick="redirect_student()">Student Login</button>
         </div>
         <br>
         <br>
         <div class="btn-container">
             <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i>
-            <button class="btn">Security Profile</button>
+            <button class="btn" onclick="redirect_security()">Security Login</button>
         </div>
-
-
     </div>
 
+    <script>
+        function redirect_student(){
+            window.location.href = "login/student"
+        }
+        function redirect_security(){
+            window.location.href = "login/security"
+        }
+
+    </script>
 </body>
 
 </html>

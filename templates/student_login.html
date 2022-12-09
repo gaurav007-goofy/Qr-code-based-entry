@@ -12,44 +12,25 @@
 <body>
     <div class="center">
         <h1>Student Login</h1>
-        <form method="POST">
+        <form action="/student/auth" method="post">
             <div class="txt_field">
-                <input type="text" id="username" required>
+                <input type="text" id="collegeId" name="collegeId" required>
                 <span></span>
-                <label>Username</label>
+                <label for="collegeId">College ID:</label>
             </div>
             <div class="txt_field">
-                <input type="password" id="password" required>
+                <input type="text" id="password" name="password" required>
                 <span></span>
-                <label>Password</label>
+                <label for="password">Password:</label>
             </div>
             <div class="pass">Forgot Password?</div>
-            <input type="button" id="submit" value="Login">
+            <input type="submit" value="submit">
             <div class="signup_link">
-                Not a member? <a href="#">Signup</a>
+                Not registered? <a href="#">Signup</a>
             </div>
         </form>
     </div>
 
-
-    <!-- <script>
-        function submitData() {
-            var username = $('#username').val();
-            var password = $('#password').val();
-
-            jsonObject = {
-                "Username": "",
-                "Password": ""
-            }
-            jsonObject.Username = username;
-            jsonObject.Password = password;
-
-            var str = JSON.stringify(jsonObject);
-
-            console.log(str);
-        }
-        window.location.replace = "main.html";
-    </script> -->
 </body>
 
 </html>
