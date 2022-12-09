@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Student Profile</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/student_profile.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,28 +12,32 @@
 
 <body>
     <div class="wrapper">
-        <input type="checkbox" id="btn" hidden>
-        <label for="btn" class="menu-btn">
-         <i class="fas fa-bars"></i>
-         <i class="fas fa-times"></i>
-         </label>
-        <nav id="sidebar">
-            <div class="title">
-                Side Menu
+        <div class="img-area">
+            <div class="inner-area">
+                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
             </div>
-            <ul class="list-items">
-                <li><a href="#"><i class="fas fa-home"></i>My Profile</a></li>
-                <li><a href="#"><i class="fas fa-sliders-h"></i>Recent Entries</a></li>
-                <li><a href="qr_code.html"><i class="fas fa-address-book"></i>Scan QR</a></li>
-                <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
-                <li><a href="#"><i class="fas fa-stream"></i>Help</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="content">
-        <div class="header">
-            Student Profile
+        </div>
+        <br>
+        <div class="name">Gaurav Saini</div>
+        <br>
+        <ul>
+            <li>Roll NO. : 195055</li>
+            <li>Name : Gaurav Saini</li>
+            <li>Date of Birth : 29-12-2000</li>
+            <li>College Id : 195055@nith.ac.in</li>
+            <li>Phone Number : 9784257561</li>
+        </ul>
+
+        <br>
+<!--        <div class="social-icons">-->
+<!--            <a href="main.html" class="myProfile"><i class="fas fa-user" style="font-size: 20px;"></i></a>-->
+<!--            <a href="#" class="recentEntries"><i class="fas fa-database" style="font-size: 20px;"></i></a>-->
+<!--            <a href="login.html" class="signOut"><i class="fas fa-sign-out-alt" style="font-size: 20px;"></i></a>-->
+<!--        </div>-->
+        <br>
+
+        <div class="buttons">
+            <button onclick="myFunction()">Do Entry</button>
         </div>
     </div>
 </body>
