@@ -47,7 +47,7 @@ class Building:
 class EntryRequest:
     securityId: str
     studentId: str
-    instituteId: str
+    buildingId: str
     entryId: str = ''.join(
         random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(6))
     updatedTimestamp: str = datetime.now().strftime(Formats.timestamp_format)
