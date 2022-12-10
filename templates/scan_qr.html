@@ -10,24 +10,23 @@
 </head>
 
 <body>
-    <h1>QR Code Scanner</h1>
-    <br>
-    <div>
-        <img src = "{{url_for('student.video')}}" width = "80%"/>
-    </div>
-    <br>
-    <br>
-    <br>
-    <p>Note : The Camera will stop when it scans the QR. Please, Press the button below for ensuring the entry is done</p>
-    <br>
+
     <br>
     <div class="container">
-    <div class="btn-container">
-           <form action="/student/add_entry" method="post">
-                <input type ="submit" value="Make Entry">
-            </form>
+        <h1>QR Code Scanner</h1>
+        <br>
+    <div class="img-container">
+        <img src = "{{url_for('student.video')}}"/>
     </div>
+    <p>Note : The Camera will stop when it scans the QR. Please, Press the button below for ensuring the entry is done</p>
+    <br>
+
+   <form action="/student/add_entry" method="post">
+        <input type ="submit" id="submit" value="Make Entry">
+    </form>
+
     </div>
+
 </body>
 
 </html>

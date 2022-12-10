@@ -8,10 +8,14 @@
 
 body {
     margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #6da7cd, #15a2b8);
-    height: 100vh;
-    overflow: hidden;
+  padding: 0;
+  background-image: url("../images/background_image.jpeg");
+  background-color: #cccccc;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .center {
