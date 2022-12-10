@@ -53,3 +53,16 @@
 # #     }
 # #     create_student(req)
 # #
+
+# def input_data():
+#     req = {
+#         "firstName": "Gaurav",
+#         "lastName": "Saini",
+#         "collegeId": "195055",
+#         "collegeEmailId": "195055@nith.ac.in",
+#         "dateOfBirth": "29-12-2000",
+#         "phoneNumber": "9784257561",
+#         "imageUrl": storage.child("display-pictures/195055.jpg").get_url(None)
+#     }
+#     create_student(req)
+#

@@ -8,7 +8,7 @@ app.register_blueprint(studentAPI)
 
 @app.route('/')
 def run():
-    return render_template('scan_qr.html')
+    return render_template('homepage.html')
 
 
 @app.route('/login/<string:login_type>')

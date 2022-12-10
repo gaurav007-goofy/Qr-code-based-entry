@@ -55,16 +55,16 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
+  width: 70px;
   height: 40px;
-  padding: 10px;
+  padding: 60px;
 }
 .btn
 {
   position: relative;
   text-align: center;
-  width: 170px;
-  padding: 15px;
+  width: 200px;
+  padding: 40px;
   margin-left: 20px;
   font-size: 0.7rem;
   color: white;

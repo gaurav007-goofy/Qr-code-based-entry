@@ -19,6 +19,7 @@ entryDB = firestore.client().collection("entry-service-db")
 studentAPI = Blueprint('student', __name__, url_prefix='/student')
 
 global_student_id = "null"
+qr_code = "null"
 
 
 def generate_frames(camera):
@@ -33,6 +34,8 @@ def generate_frames(camera):
             data, one, _ = qr_detector.detectAndDecode(frame)
             if (data):
                 print("Printed Data is: {}".format(str(data)))
+                global qr_code
+                qr_code = str(data)
                 camera.release()
                 cv2.destroyAllWindows()
                 # render_without_request('index1.html', var1='foo', var2='bar')
@@ -78,21 +81,6 @@ def get_student():
     global_student_id = student_res[Keys.student_id]
     return render_template("student_profile.html", student=student_res)
 
-
-# def input_data():
-#     req = {
-#         "firstName": "Gaurav",
-#         "lastName": "Saini",
-#         "collegeId": "195055",
-#         "collegeEmailId": "195055@nith.ac.in",
-#         "dateOfBirth": "29-12-2000",
-#         "phoneNumber": "9784257561",
-#         "imageUrl": storage.child("display-pictures/195055.jpg").get_url(None)
-#     }
-#     create_student(req)
-#
-
-
 @studentAPI.get('/scan_entry')
 def scan_qr():
     return render_template("scan_qr.html")
@@ -106,10 +94,12 @@ def video():
     return Response(pic, mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
-@studentAPI.get('/add_entry')
+@studentAPI.post('/add_entry')
 def add_entry():
-    security_id = "3hd8k3"
-    building_id = "reading_hall"
+    tok = qr_code.split('#')
+    print(tok)
+    security_id = tok[0]
+    building_id = tok[1]
     entry_data = EntryRequest(
         studentId=global_student_id,
         securityId=security_id,
@@ -117,7 +107,4 @@ def add_entry():
     )
     entry_data = entry_data.__dict__
     res = entryDB.add(entry_data)
-    print(res)
-    for row in res:
-        print(res.to_dict())
-    return "done"
+    return render_template("You Entry Is Done")
