@@ -14,3 +14,7 @@ class Keys:
     created_timestamp = "createdTimestamp"
     password = "password"
     image_url = "imageUrl"
+    hostelName = "hostelName"
+    security_id = "securityId"
+    building_id = "buildingId"
+    email_id = "emailId"

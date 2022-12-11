@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Profile Card UI Design</title>-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/entry_done.css') }}" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"  rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="profile-card">
+      <span>
+        <h1>Entry Done Successfully
+        </h1>
+      </span>
+      <span id = "tick-mark"></span>
+      <div class="text-data">
+        <span class="job">Security ID
+          <span class="text-boxy"> {{entry["securityId"]}}</span>
+        </span>
+        <span class="job">Building ID
+          <span class="text-boxy"> {{entry["buildingId"]}}</span>
+        </span>
+        <span class="job">Entry Timestamp
+          <span class="text-boxy"> {{entry["createdTimestamp"]}} </span>
+        </span>
+
+      </div>
+
+
+
+      <div class="btn-cont">
+        <button class="btn" onclick="scan_qr_page()">BACK TO PROFILE</button>
+      </div>
+
+
+    </div>
+      <script>
+        function scan_qr_page(){
+            window.location.href = "/student/redirect/profile"
+        }
+
+    </script>
+  </body>
+</html>
+

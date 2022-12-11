@@ -1,49 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profiles</title>
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-
-    <div class="navbar-container">
+  <div class="container">
+  <div class="navbar-container">
         <div class="img-container">
-            <img src="../static/icons/nith_logo.png" height="130px" width="130px">
+            <img src="../static/icons/nith_logo.png" height="170px" width="170px">
         </div>
         <div class="details-container">
-            <h2>Central Library</h2>
+            <h2>College Entry System</h2>
             <p>NIT Hamirpur , Pin Code: 177005 (H.P)</p>
         </div>
     </div>
-    <div class="container">
-        <div class="btn-container">
-            <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i>
-            <button class="btn" onclick="redirect_student()">Student Login</button>
-        </div>
-        <br>
-        <br>
-        <div class="btn-container">
-            <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i>
-            <button class="btn" onclick="redirect_security()">Security Login</button>
-        </div>
+    <div class="title">Select profile type?</div>
+
+    <div class="btn-cont">
+      <button class="btn" onclick="redirect_student_login()">Student</button>
+      <br>
+      <button class="btn" onclick="redirect_security_login()">Security</button>
     </div>
 
-    <script>
-        function redirect_student(){
-            window.location.href = "login/student"
-        }
-        function redirect_security(){
-            window.location.href = "login/security"
-        }
 
-    </script>
+  </div>
+
+  <script>
+    function redirect_student_login(){
+      window.location.href = "/login/student"
+    }
+    function redirect_security_login(){
+      window.location.href = "/login/security"
+    }
+  </script>
+
 </body>
-
 </html>

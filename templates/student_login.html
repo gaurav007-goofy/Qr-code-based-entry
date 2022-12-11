@@ -1,36 +1,36 @@
 <!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/student_login.css') }}" />
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
-</head>
-
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-    <div class="center">
-        <h1>Student Login</h1>
-        <form action="/student/auth" method="post">
-            <div class="txt_field">
-                <input type="text" id="collegeId" name="collegeId" required>
-                <span></span>
-                <label for="collegeId">College ID:</label>
-            </div>
-            <div class="txt_field">
-                <input type="password" id="password" name="password" required>
-                <span></span>
-                <label for="password">Password:</label>
-            </div>
-            <div class="pass">Forgot Password?</div>
-            <input type="submit" id = "submit" value="Login">
-            <div class="signup_link">
-                Not registered? <a href="#">Signup</a>
-            </div>
-        </form>
+  <div class="container">
+    <div class="title">Login</div>
+    <div class="content">
+      <form action="/student/auth" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">College Email ID</span>
+            <input type="text" name="collegeEmailId" placeholder="Enter your college email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" name="password" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="signup_link">
+          Not registered? <a href="/student/register">Signup</a>
+        </div>
+        <div class="button">
+          <input type="submit" id="submit" value="Login">
+        </div>
+      </form>
     </div>
+  </div>
 
 </body>
-
 </html>

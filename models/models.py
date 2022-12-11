@@ -14,7 +14,8 @@ class Student:
     collegeEmailId: str
     dateOfBirth: str
     phoneNumber: str
-    imageUrl: str
+    hostelName: str
+    imageUrl: str = "null"
     password: str = ''.join(
         random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(4))
     studentId: str = ''.join(

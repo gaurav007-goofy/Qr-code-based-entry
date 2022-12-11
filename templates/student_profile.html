@@ -1,47 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title>Profile Card UI Design</title>-->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/student_profile.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 
-<body>
-    <div class="wrapper">
-        <div class="img-area">
-            <div class="inner-area">
-                <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
-        </div>
-        <br>
-        <div class="name">{{student["firstName"]}} {{student["lastName"]}}</div>
-        <br>
-        <ul>
-            <li>College Id : {{student["collegeId"]}}</li>
-            <li>Date of Birth : {{student["dateOfBirth"]}}</li>
-            <li>Phone Number : {{student["phoneNumber"]}}</li>
-            <li>Email ID : {{student["collegeEmailId"]}}</li>
-        </ul>
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"  rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="image">
+        <img src="https://firebasestorage.googleapis.com/v0/b/college-entry-system.appspot.com/o/display-pictures%2F195036.png?alt=media&token=c1c75794-00ef-4c8e-9e77-ec650062df1b" alt="" class="profile-img" />
+      </div>
 
-        <br>
-<!--        <div class="social-icons">-->
-<!--            <a href="main.html" class="myProfile"><i class="fas fa-user" style="font-size: 20px;"></i></a>-->
-<!--            <a href="#" class="recentEntries"><i class="fas fa-database" style="font-size: 20px;"></i></a>-->
-<!--            <a href="login.html" class="signOut"><i class="fas fa-sign-out-alt" style="font-size: 20px;"></i></a>-->
+      <div class="text-data">
+        <span class="name">{{student["firstName"]}} {{student["lastName"]}}</span>
+        <span class="job">College ID
+          <span class="text-boxy"> {{student["collegeId"]}} </span>
+        </span>
+        <span class="job">Date Of Birth
+          <span class="text-boxy"> {{student["dateOfBirth"]}} </span>
+        </span>
+        <span class="job">Phone Number
+          <span class="text-boxy"> {{student["phoneNumber"]}} </span>
+        </span>
+        <span class="job">Hostel Name
+          <span class="text-boxy"> {{student["hostelName"]}} </span>
+        </span>
+        <span class="job">College Email
+          <span class="text-boxy"> {{student["collegeEmailId"]}} </span>
+        </span>
+<!--        <span class="job">Date Of Birth-->
+<!--          <span class="text-boxy"> {{student["dateOfBirth"]}} </span>-->
+<!--        </span>-->
+      </div>
+
+<!--      <div class="media-buttons">-->
+<!--        <a href="#" style="background: #4267b2" class="link">-->
+<!--          <i class="bx bxl-facebook"></i>-->
+<!--        </a>-->
+<!--        <a href="#" style="background: #1da1f2" class="link">-->
+<!--          <i class="bx bxl-twitter"></i>-->
+<!--        </a>-->
+<!--        <a href="#" style="background: #e1306c" class="link">-->
+<!--          <i class="bx bxl-instagram"></i>-->
+<!--        </a>-->
+<!--        <a href="#" style="background: #ff0000" class="link">-->
+<!--          <i class="bx bxl-youtube"></i>-->
+<!--        </a>-->
+<!--      </div>-->
+
+      <div class="btn-cont">
+        <button class="btn" onclick="scan_qr_page()">SCAN QR</button>
+      </div>
+
+<!--      <div class="analytics">-->
+<!--        <div class="data">-->
+<!--          <i class="bx bx-heart"></i>-->
+<!--          <span class="number">60k</span>-->
 <!--        </div>-->
-        <br>
-
-        <div class="buttons">
-            <form action="/student/scan_entry">
-                <input type ="submit" value="Do Entry ->">
-            </form>
-
-        </div>
+<!--        <div class="data">-->
+<!--          <i class="bx bx-message-rounded"></i>-->
+<!--          <span class="number">20k</span>-->
+<!--        </div>-->
+<!--        <div class="data">-->
+<!--          <i class="bx bx-share"></i>-->
+<!--          <span class="number">12k</span>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
-</body>
+      <script>
+        function scan_qr_page(){
+            window.location.href = "/student/scan_entry"
+        }
 
+    </script>
+  </body>
 </html>
+

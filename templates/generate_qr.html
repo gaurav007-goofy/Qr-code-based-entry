@@ -6,15 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR code</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/generate_qr.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scan_qr.css') }}" />
 </head>
 
 <body>
-    <h2>Please Scan the QR Code below !</h2>
-    <!-- <img src="qr_code.png" alt="Generated QR Code image"></img> -->
-    <br>
-    <br>
-    <button class="verify-btn">Verify Entry</button>
+    <div class="profile-card">
+        <br>
+        <div class="container">
+            <h1>Scan the QR Code below</h1>
+            <br>
+        <div class="img-container">
+            <img src = "../static/images/qr_code.png"/>
+        </div>
+        <p>Note : Please Verify the entry status in Student's Phone</p>
+        <br>
+
+       <form action="/security/redirect/profile" method="post">
+            <input type ="submit" id="submit" style="background:#1FD655" value="Entry Verified ✅">
+        </form>
+
+        </div>
+    </div>
 
 </body>
 

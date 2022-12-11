@@ -1,137 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-image: url("../images/background_image.jpeg");
-  background-color: #cccccc;
+body {
   height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.wrapper,
-.wrapper .img-area,
-.social-icons a,
-.buttons button{
-  background: #92f0f0;
-}
-.wrapper{
-  position: relative;
-  width: 350px;
-  padding: 30px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background: #fff;
 }
-
-.wrapper .img-area{
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  min-height: 600px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  background-color: #4070f4;
+}
+.image {
+  position: relative;
   height: 150px;
   width: 150px;
+//  border-radius: 50%;
+//  background-color: #4070f4;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 50%;
+  border: 2px solid #fff;
+}
+.profile-card .text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+.text-data .name {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.text-data .job {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 5px;
+}
+.profile-card .media-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.media-buttons .link {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.img-area .inner-area{
-  height: calc(100% - 25px);
-  width: calc(100% - 25px);
+  color: #fff;
+  font-size: 18px;
+  height: 34px;
+  width: 34px;
   border-radius: 50%;
-}
-.inner-area img{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.wrapper .name{
-  font-size: 25px;
-  font-weight: 800;
-  color: #31344b;
-  margin: 10px 0 5px 0;
-}
-.wrapper .about{
-  color: #44476a;
-  font-weight: 400;
-  font-size: 16px;
-}
-.wrapper .social-icons{
-  margin: 15px 0 25px 0;
-}
-.social-icons a{
-  position: relative;
-  height: 50px;
-  width: 50px;
-  margin: 0 5px;
-  display: inline-flex;
+  margin: 0 8px;
+  background-color: #4070f4;
   text-decoration: none;
-  border-radius: 50%;
-  background-color: antiquewhite;
 }
-
-.social-icons a i{
-  position: relative;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  line-height: 50px;
-}
-.social-icons a.myProfile i{
-  color: #4267B2;
-}
-.social-icons a.recentEntries i{
-  color: #1DA1F2;
-}
-.social-icons a.signOut i{
-  color: #E1306C;
-}
-
-.wrapper .buttons{
+.profile-card .buttons {
   display: flex;
-  width: 70%;
-  justify-content: space-between;
-  margin-bottom : 5px;
+  align-items: center;
+  margin-top: 25px;
 }
-.buttons button{
-  position: relative;
-  width: 90%;
+.buttons .button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
   border: none;
-  outline: none;
-  padding: 10px;
-  color: #31344b;
-  background-color: #2691d9;
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 20px;
+  border-radius: 24px;
+  margin: 0 10px;
+  padding: 8px 24px;
+  background-color: #4070f4;
   cursor: pointer;
-  z-index: 4;
+  transition: all 0.3s ease;
 }
-.buttons button:first-child{
-  margin-right: 10px;
+.buttons .button:hover {
+  background-color: #0e4bf1;
 }
-.buttons button:last-child{
-  margin-left: 10px;
+.profile-card .analytics {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.analytics .data {
+  display: flex;
+  align-items: center;
+  color: #333;
+  padding: 0 20px;
+  border-right: 2px solid #e7e7e7;
+}
+.data i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+.data:last-child {
+  border-right: none;
 }
 
-li{
-  list-style : none;
+.text-boxy {
+    background-color: #e3e1dc;
+    font-weight: 600;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
 }
-ul li {
-  font-size: 1rem;
-  font-weight: 600;
-  padding : 9px;
-  background: white;
-  color: Black;
-  margin: 10px;
-  border-radius : 10px;
-}
+
+.btn-cont{
+   height: 45px;
+   margin: 35px 0
+ }
+.btn {
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   padding-left: 10px;
+   padding-right: 10px;
+   transition: all 0.3s ease;
+   background-color: #4070f4;
+ }
